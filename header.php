@@ -45,6 +45,10 @@
   <!-- Wordpress Head Items -->
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write('<script src="<?php echo $GLOBALS["TEMPLATE_RELATIVE_URL"] ?>html5-boilerplate/js/libs/jquery-1.5.1.min.js"><\/script>')</script>
+
   <?php wp_head(); ?>
 
 </head>
