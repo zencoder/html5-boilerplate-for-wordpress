@@ -22,7 +22,7 @@
 
 
   <!--[if lt IE 7 ]>
-    <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/dd_belatedpng.js") ?>
+    <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/libs/dd_belatedpng.js") ?>
   <![endif]-->
 
   <?php wp_footer(); ?>
