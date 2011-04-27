@@ -13,12 +13,26 @@ and [section](http://html5doctor.com/the-section-element/).
 
 It's a very bare layout, including only the base styles that come with the boilerplate and required WordPress styles, so layout is up to you. Alternatively, you could apply the methods used here to other themes.
 
+To Get Repo & Submodules
+--------------
+1. `git clone git@github.com:walker/html5-boilerplate-for-wordpress.git`
+2. `cd html4-boilerplate-for-wordpress`
+3. `git submodule init`
+4. `git submodule update`
+
 Getting Started
 ---------------
 1. Add the html5-boilerplate-for-wordpress folder to your wp-content/themes folder.
 2. Activate the theme. WP-Admin > Appearance > Themes
 3. Add some of the "Root Files" to the root directory of your website (explained below).
 4. Style away, knowing that you're building on a super solid base with HTML5 awesomeness.
+
+To Build Your Theme for Production
+---------------
+1. `cd [path to themes dir]/html5-boilerplate-for-wordpress/build`
+2. `ant build` (or `ant minify`)
+3. Change the folder created called "publish" to the name of your theme. Upload that folder to your server. That folder becomes your main theme directory on your production server.
+
 
 Root Files
 ----------
