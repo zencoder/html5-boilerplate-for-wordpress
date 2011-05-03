@@ -17,12 +17,12 @@
 </div> <!--! end of #container -->
 
   <!-- Javascript that is non-plugin related at the bottom for fast page loading -->
-  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/plugins.js") ?>
-  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/script.js") ?>
+  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/plugins.js") ?>
+  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/script.js") ?>
 
 
   <!--[if lt IE 7 ]>
-    <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/libs/dd_belatedpng.js") ?>
+    <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/libs/dd_belatedpng.js") ?>
   <![endif]-->
 
   <?php wp_footer(); ?>
