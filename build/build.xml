@@ -696,18 +696,18 @@
         <echo message="Minifying css..."/>
         
         <apply executable="java" parallel="false">
-            <fileset dir="./${dir.publish}/${dir.css}/" includes="style-${build.number}.css"/>
+            <fileset dir="./${dir.publish}/" includes="style-${build.number}.css"/>
             <arg line="-jar"/>
             <arg path="${dir.build.tools}/${tool.yuicompressor}"/>
             <srcfile/>
             <arg line="-o"/>
-            <mapper type="glob" from="style-${build.number}.css" to="../${dir.publish}/${dir.css}/style-${build.number}.min.css"/>
+            <mapper type="glob" from="style.css" to="../${dir.publish}/style.min.css"/>
             <targetfile/>
         </apply>
         
         <echo message="Updating the HTML with the new css filename"/>
         
-        <replace token="style.css" value="style-${build.number}.min.css" dir="${dir.publish}" includes="${page-files}"/>
+        <replace token="style.css" value="style.min.css" dir="${dir.publish}" includes="${page-files}"/>
     </target>
     
     
