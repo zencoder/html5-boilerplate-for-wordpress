@@ -56,7 +56,7 @@
   <?php wp_head(); ?>
 
 </head>
-<body>
+<body <?php body_class(); ?>>
   <div id="container">
     <header role="banner">
       <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
