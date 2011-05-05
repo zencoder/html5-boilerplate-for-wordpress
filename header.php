@@ -5,7 +5,11 @@
  */
 ?>
 <!doctype html>
-<html lang="en" class="no-js">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -34,33 +38,25 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- CSS : implied media="all" -->
-  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."style.css") ?>
+  <?php versioned_stylesheet(get_bloginfo('template_url')."/style.css") ?>
 
   <!-- For the less-enabled mobile browsers like Opera Mini -->
-  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."handheld.css", 'media="handheld"') ?>
+  <?php versioned_stylesheet(get_bloginfo('template_url')."/handheld.css", 'media="handheld"') ?>
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/libs/modernizr-1.7.min.js") ?>
+  <?php versioned_javascript(get_bloginfo('template_url')."/js/libs/modernizr-1.7.min.js") ?>
 
   <!-- Wordpress Head Items -->
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-  <script>!window.jQuery && document.write('<script src="<?php echo $GLOBALS["TEMPLATE_RELATIVE_URL"] ?>js/libs/jquery-1.6.min.js"><\/script>')</script>
+  <script>!window.jQuery && document.write('<script src="<?php bloginfo('template_url') ?>/js/libs/jquery-1.6.min.js"><\/script>')</script>
 
   <?php wp_head(); ?>
 
 </head>
-
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-
-<!--[if lt IE 7 ]> <body <?php body_class('ie6'); ?>> <![endif]-->
-<!--[if IE 7 ]>    <body <?php body_class('ie7'); ?>> <![endif]-->
-<!--[if IE 8 ]>    <body <?php body_class('ie8'); ?>> <![endif]-->
-<!--[if IE 9 ]>    <body <?php body_class('ie9'); ?>> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <body <?php body_class('ie6'); ?>> <!--<![endif]-->
-
+<body>
   <div id="container">
     <header role="banner">
       <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
