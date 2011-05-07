@@ -21,11 +21,6 @@
   <?php versioned_javascript(get_bloginfo('template_url')."/js/script.js") ?>
 
 
-  <!--[if lt IE 7 ]>
-    <?php versioned_javascript(get_bloginfo('template_url')."/js/libs/dd_belatedpng.js") ?>
-    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-  <![endif]-->
-
   <?php wp_footer(); ?>
 
 </body>
