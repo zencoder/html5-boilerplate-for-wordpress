@@ -12,9 +12,6 @@
 <head>
   <meta charset="utf-8">
 
-  <!-- www.phpied.com/conditional-comments-block-downloads/ -->
-  <!--[if IE]><![endif]-->
-
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -38,9 +35,6 @@
 
   <!-- CSS : implied media="all" -->
   <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/style.css") ?>
-
-  <!-- For the less-enabled mobile browsers like Opera Mini -->
-  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/handheld.css", 'media="handheld"') ?>
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/modernizr-1.5.min.js") ?>
