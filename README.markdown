@@ -27,13 +27,6 @@ These files can be found in the html5-boilerplate folder in the theme (html5-boi
 ### 404 Page
 If you use permanlinks (WP-Admin > Settings > Permalinks), then WordPress handles any 404s with the 404.php included in the theme. If you don't use permalinks, then add the 404.html file to the root of your site.
 
-### .htaccess
-**Do not copy to the root of your site.** This may overwrite the WordPress htaccess, and break Wordpress. Instead, copy and paste the contents of this file to the .htaccess already at the root of your site, after the existing content. It would be good to make a comment where the Boilerplate content begins, like "# Begin HTML5 Boilerplate". Read htaccess file for more info on what it does.
-**This file may not be visible if you're viewing the folder on your computer. Files that start with a "." are often hidden. It should be visible through your FTP browser once uploaded.**
-
-### nginx.conf
-Used for a different type of web server than Apache. You don't need it.
-
 ### crossdomain.xml
 If you don't know what this is, you probably don't need it.
 www.adobe.com/devnet/flashplayer/articles/cross_domain_policy.html
