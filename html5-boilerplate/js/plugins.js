@@ -1,40 +1,14 @@
+// Avoid `console` errors in browsers that lack a console.
+if (!(window.console && console.log)) {
+    (function() {
+        var noop = function() {};
+        var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'markTimeline', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'];
+        var length = methods.length;
+        var console = window.console = {};
+        while (length--) {
+            console[methods[length]] = noop;
+        }
+    }());
+}
 
-// remap jQuery to $
-(function($){
-
- 
-
-
-
-
-
- 
-
-
-
-})(window.jQuery);
-
-
-
-// usage: log('inside coolFunc',this,arguments);
-// paulirish.com/2009/log-a-lightweight-wrapper-for-consolelog/
-window.log = function(){
-  log.history = log.history || [];   // store logs to an array for reference
-  log.history.push(arguments);
-  if(this.console){
-    console.log( Array.prototype.slice.call(arguments) );
-  }
-};
-
-
-
-// catch all document.write() calls
-(function(doc){
-  var write = doc.write;
-  doc.write = function(q){ 
-    log('document.write(): ',arguments); 
-    if (/docwriteregexwhitelist/.test(q)) write.apply(doc,arguments);  
-  };
-})(document);
-
-
+// Place any jQuery/helper plugins in here.
