@@ -12,7 +12,7 @@ get_header(); ?>
 
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
     <header>
-      <h2><?php the_title(); ?></a></h2>
+      <h2><?php the_title(); ?></h2>
     </header>
     <?php the_content('Read the rest of this entry &raquo;'); ?>
     <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
