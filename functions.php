@@ -42,6 +42,10 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
+// Post Formats
+if ( function_exists( 'add_theme_support' ) )
+	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'iamge', 'quote', 'status', 'video', 'audio', 'chat' ) );
+
 // Custom Functions for CSS/Javascript Versioning
 $GLOBALS["TEMPLATE_URL"] = get_bloginfo('template_url')."/";
 $GLOBALS["TEMPLATE_RELATIVE_URL"] = wp_make_link_relative($GLOBALS["TEMPLATE_URL"]);
