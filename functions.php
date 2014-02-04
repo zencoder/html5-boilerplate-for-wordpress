@@ -67,3 +67,9 @@ function versioned_resource($relative_url){
 
   return $relative_url.$file_version;
 }
+
+// Add Post Formats
+function add_post_formats() {
+add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'audio', 'chat', 'video'));
+}
+add_post_formats();
